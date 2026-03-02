@@ -36,9 +36,6 @@ class Code128BarcodeGeneratorPluginTest extends Unit
      */
     protected const CODE128_BARCODE_GENERATOR_PLUGIN_SOURCE_TEXT = 'generated text';
 
-    /**
-     * @return void
-     */
     public function testCode128BarcodeGeneratorPluginBarcodeResponseTransferHasCorrectData(): void
     {
         $code128BarcodeGeneratorPlugin = new Code128BarcodeGeneratorPlugin();

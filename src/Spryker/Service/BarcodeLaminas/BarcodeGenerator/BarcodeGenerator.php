@@ -19,11 +19,6 @@ class BarcodeGenerator implements BarcodeGeneratorInterface
      */
     protected const ENCODING = 'data:image/png;base64';
 
-    /**
-     * @param \Generated\Shared\Transfer\BarcodeRequestTransfer $barcodeRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\BarcodeResponseTransfer
-     */
     public function generateBarcode(BarcodeRequestTransfer $barcodeRequestTransfer): BarcodeResponseTransfer
     {
         $renderer = $this->createRenderer($barcodeRequestTransfer);
@@ -37,11 +32,6 @@ class BarcodeGenerator implements BarcodeGeneratorInterface
         return $this->createBarcodeResponseTransfer(base64_encode($contents));
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\BarcodeRequestTransfer $barcodeRequestTransfer
-     *
-     * @return \Laminas\Barcode\Renderer\RendererInterface
-     */
     protected function createRenderer(BarcodeRequestTransfer $barcodeRequestTransfer): RendererInterface
     {
         $options = $barcodeRequestTransfer->getBarcodeOptions();
@@ -54,11 +44,6 @@ class BarcodeGenerator implements BarcodeGeneratorInterface
         );
     }
 
-    /**
-     * @param string $text
-     *
-     * @return \Generated\Shared\Transfer\BarcodeResponseTransfer
-     */
     protected function createBarcodeResponseTransfer(string $text): BarcodeResponseTransfer
     {
         return (new BarcodeResponseTransfer())

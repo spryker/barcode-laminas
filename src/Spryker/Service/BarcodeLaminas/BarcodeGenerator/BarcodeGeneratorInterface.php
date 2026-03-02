@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\BarcodeResponseTransfer;
 
 interface BarcodeGeneratorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\BarcodeRequestTransfer $barcodeRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\BarcodeResponseTransfer
-     */
     public function generateBarcode(BarcodeRequestTransfer $barcodeRequestTransfer): BarcodeResponseTransfer;
 }

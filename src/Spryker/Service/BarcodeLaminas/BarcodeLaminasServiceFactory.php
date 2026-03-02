@@ -13,9 +13,6 @@ use Spryker\Service\Kernel\AbstractServiceFactory;
 
 class BarcodeLaminasServiceFactory extends AbstractServiceFactory
 {
-    /**
-     * @return \Spryker\Service\BarcodeLaminas\BarcodeGenerator\BarcodeGeneratorInterface
-     */
     public function createBarcodeGenerator(): BarcodeGeneratorInterface
     {
         return new BarcodeGenerator();
